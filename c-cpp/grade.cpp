@@ -11,7 +11,7 @@ int main(){
 	total = 100*3; gained=a+b+c;
 	prc = (gained/total)*100;
 	//printf("%f %f  %f\n", prc, total, gained);
-	if(prc>=90){printf("Your Grade Is : %c");}
+	if(prc>=90){printf("Your Grade Is : A+");}
 	else if(prc>80 & prc<90){printf("Your Grade Is : A");}
 	else if(prc>70 & prc<80){printf("Your Grade Is : B+");}
 	else if(prc>60 & prc<70){printf("Your Grade Is : B");}
