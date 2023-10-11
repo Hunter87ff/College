@@ -21,8 +21,7 @@ int main(){
     }
 		for(int i=1; i<=l; i++){
 			int mod = x%10; 
-      power = pow(mod, l);
-			s += power; x/=10;}
+			s += pow(mod, l); x/=10;}
 		if(c==s){
       printf("%d Armstrong\n", c);
     }
