@@ -1,7 +1,7 @@
 //wap to enter a number and print it is bahubali or not
 #include <stdio.h>
 
-int pval(int v, int l){
+int pow(int v, int l){
 	int pwr=1;
 	for(int i=1; i<=l; i++){
     pwr *= v;
@@ -21,7 +21,7 @@ int main(){
     }
 		for(int i=1; i<=l; i++){
 			int mod = x%10; 
-      power = pval(mod, l);
+      power = pow(mod, l);
 			s += power; x/=10;}
 		if(c==s){
       printf("%d Armstrong\n", c);
