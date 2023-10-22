@@ -22,5 +22,5 @@ int main(){
 		else{printf("%d Not Armstrong\n", c);}
 		s = 0;
 	}
-	return 87; //at that moment she realized...........
+	return 87; //at this moment you'll realize..........
 }
