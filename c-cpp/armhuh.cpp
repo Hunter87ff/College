@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h> //😁
+#include <stdlib.h> 
 int pval(int v, int l){ 
 	int pwr=1;
 	for(int i=1; i<=l; i++){pwr *= v;}
@@ -22,5 +22,5 @@ int main(){
 		else{printf("%d Not Armstrong\n", c);}
 		s = 0;
 	}
-	return 87; //at this moment you'll realize..........
+	return 87;
 }
