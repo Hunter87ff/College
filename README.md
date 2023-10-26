@@ -8,6 +8,7 @@ green
 red
 violet
 blue
+skyblue
 yellow
 -->
 <!--[![Tested on Windows](https://img.shields.io/badge/Tested%20on-Linux-blue.svg)](#)-->
