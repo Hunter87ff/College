@@ -1,5 +1,5 @@
 # Codes
-[![Testing](https://github.com/Hunter87ff/FileShare/actions/workflows/python-app.yml/badge.svg)](https://github.com/Hunter87ff/College/actions/workflows/c-cpp.yml)
+[![PY Tests](https://github.com/Hunter87ff/College/actions/workflows/py-test.yml/badge.svg)](https://github.com/Hunter87ff/College/actions/workflows/py-test.yml)
 [![Tested on Windows](https://img.shields.io/badge/Tested%20on-Windows-blue.svg)](#)
 <br>
 [![Lang](https://img.shields.io/badge/Lang-C/CPP-purple.svg)](#)
