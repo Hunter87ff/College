@@ -1,5 +1,5 @@
 <?php
-echo "echo does not require parentheses.";
+echo "Naam to suna hi hoga Hunter87";
 
 // Strings can either be passed individually as multiple arguments or
 // concatenated together and passed as a single argument
