@@ -46,9 +46,9 @@ def query(q:str, sents) -> str:
     return matched
 
 
-inp = input("Enter your the paragraph: ")
+inp = input("Enter the paragraph: ")
 while True:
-    inp = input("Enter your the paragraph: ")
+    inp = input("Enter your question: ")
     if inp == "exit":
         break
     print(query(inp, sents2)[0]['a'])
