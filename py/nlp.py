@@ -1,4 +1,4 @@
-# Author : Hunter
+# Author : Hunter87
 # Github : https://github.com/hunter87ff
 # Insta  : https://instagram.com/im_hunter87
 # Youtube: https://youtube.com/@hunter87
