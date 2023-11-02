@@ -1,3 +1,8 @@
+# Author : Hunter
+# Github : https://github.com/hunter87ff
+# Insta  : https://instagram.com/im_hunter87
+# Youtube: https://youtube.com/@hunter87
+
 import numpy as np
 
 sents2 = """Elephants are the largest living land mammals. India is the world's largest democracy. Engineers are destroying jobs, they even destroying their own jobs. The world's largest desert is the Sahara, which covers nearly all of northern Africa.India has largest popoulation in the world.Westbengal state has more population than canada."""
