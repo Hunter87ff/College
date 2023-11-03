@@ -2,7 +2,7 @@
 # Github : https://github.com/hunter87ff
 # Insta  : https://instagram.com/im_hunter87
 # Youtube: https://youtube.com/@hunter87
-import numpy as np
+#import numpy as np
 
 
 def token(q: str) -> str:
@@ -13,16 +13,23 @@ def p2l(para:str):
     para = para.lower().translate(str.maketrans('', '', '^`~@?\'"!;:')).replace("  ", " ").replace("\n", "").strip()
     st=para.split(".")
     return st
-
+    
+def intersect(arr1, arr2):
+  li = []
+  for i in arr1:
+    if i in arr2:
+      li.append(i)
+  return li 
+  
 def query(q:str, para) -> str:
     sents = p2l(para)
     q = token(q)
     qlen = len(q)
     matched = []
-    x = np.array(q)
+    x = q
     for s in sents:
-        y = np.array(s.lower().split())
-        ints = set(np.intersect1d(x, y))
+        y = s.lower().split()
+        ints = intersect(x, y)
         if len(ints) > 0:
             perc = len(ints) / qlen
             #print(perc) #accuracy
