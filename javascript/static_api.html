@@ -1,0 +1,44 @@
+// 
+<title>api</title>
+<p style="display:none;"> 
+    <span id="spn">this is span</span> <br>
+    Now this is paragraph
+</p>
+<p style="display:none;"> 
+    <span id="spn2">this is span</span> <br>
+    Now this is paragraph2
+</p>
+<div class="root"></div>
+
+<script src="https://sprucebot.tech/static/js/jquery.js"></script>
+
+
+
+
+
+<script>
+const url = document.location.href;
+//127.0.0.1:3000/test.html?url=httos://dashboard.87-hunter.repl.co&tag=#spn&val=innerHTML
+var root = $('.root');
+const searchParams = new URLSearchParams(url.split('?')[1]);
+const params = {};
+for (const [key, value] of searchParams.entries()) {
+  params[key] = value;
+}
+console.log(params);
+const data_url = params["url"]
+const data_tag = params["tag"]
+const data_val = params["val"]
+
+
+$.get(url, function(data) {
+  var htmlContent = data;
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(htmlContent, 'text/html');
+  const elm = doc.querySelector(data_tag); //params["tag"]
+  console.log(doc)
+  console.log(elm.innerHTML); 
+  root.append(elm.innerHTML);
+});
+
+</script>
