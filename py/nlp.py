@@ -15,11 +15,7 @@ def p2l(para:str):
     return st
     
 def intersect(arr1, arr2):
-  li = []
-  for i in arr1:
-    if i in arr2:
-      li.append(i)
-  return li 
+  return [x for x in arr1 if x in arr2]
   
 def query(q:str, para) -> str:
     sents = p2l(para)
@@ -32,20 +28,20 @@ def query(q:str, para) -> str:
         ints = intersect(x, y)
         if len(ints) > 0:
             perc = len(ints) / qlen
-            #print(perc) #accuracy
+            print(perc) #accuracy
             matched.append({"m":len(ints), "a":s.strip(), "perc":perc})
     if len(matched) == 0:return "I don't have enough information to answer that."
     matched = sorted(matched, key=lambda k: k['m'], reverse=True)
     return matched
 
-
+"""
 pra = input("Enter the paragraph: ")
 while True:
     qry = input("Enter your question: ")
     if qry == "exit":
         break
     print(query(qry, pra)[0]['a'])
-
-#sents2 = """Elephants are the largest living land mammals. India is the world's largest democracy. Engineers are destroying jobs, they even destroying their own jobs. The world's largest desert is the Sahara, which covers nearly all of northern Africa.India has largest popoulation in the world.Westbengal state has more population than canada."""
-# q  = "which is the largest desert in the world?"
-# print(query(q, sents2)[0]['a'])
+"""
+sents2 = """Elephants are the largest living land mammals. India is the world's largest democracy. Engineers are destroying jobs, they even destroying their own jobs. The world's largest desert is the Sahara, which covers nearly all of northern Africa.India has largest popoulation in the world.Westbengal state has more population than canada. india is the father of pakistan. pakistan just play cricket, but it's national game is terrorism"""
+q  = "father of pakistan"
+print(query(q, sents2)[0]['a'])
