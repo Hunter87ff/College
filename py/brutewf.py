@@ -1,3 +1,7 @@
+#Author : Hunter87ff
+#Youtube : https://youtube.com/@hunter_87
+#Insta : https://instagram.com/im_hunter87
+
 try:
     import argparse, sys, os, os.path, platform, re, time, pywifi
     from pywifi import PyWiFi, const, Profile
