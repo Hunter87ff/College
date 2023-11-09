@@ -4,7 +4,7 @@
 # Youtube: https://youtube.com/@hunter87
 
 try:
-    import argparse, sys, os, os.path, platform, re, time, pywifi
+    import os, time, pywifi
     from pywifi import PyWiFi, const, Profile
 except:
     libs = ["pywifi"]
