@@ -1,6 +1,7 @@
-#Author : Hunter87ff
-#Youtube : https://youtube.com/@hunter_87
-#Insta : https://instagram.com/im_hunter87
+# Author : Hunter87
+# Github : https://github.com/hunter87ff
+# Insta  : https://instagram.com/im_hunter87
+# Youtube: https://youtube.com/@hunter87
 
 try:
     import argparse, sys, os, os.path, platform, re, time, pywifi
