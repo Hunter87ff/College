@@ -1,4 +1,3 @@
-# Codes 
 
 [![PY Tests](https://github.com/Hunter87ff/College/actions/workflows/py-test.yml/badge.svg)](https://github.com/Hunter87ff/College/actions/workflows/py-test.yml)
 <br>
