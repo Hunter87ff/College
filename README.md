@@ -21,3 +21,5 @@ yellow
 -->
 <!--[![Forks](https://img.shields.io/github/forks/unter87ff/college?style=social)](#)-->
 <!--[![Tested on Windows](https://img.shields.io/badge/Tested%20on-Linux-blue.svg)](#)-->
+
+![Activities](https://repobeats.axiom.co/api/embed/acb891f2b10362c987095adbe4f450b3a3252f5b.svg "Repobeats analytics image")
