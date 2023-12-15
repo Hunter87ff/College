@@ -21,3 +21,20 @@ int main(){
 2, 3, 4, 6, 7, 8
 8, 7, 6, 4, 3, 2
 */
+
+
+
+/*Method 2
+#include<stdio.h>
+int main(){
+  int arr[5] = {3, 4, 6, 7, 8}, arr2[5], x=0;
+  for(int i=4; i>=0; i--){
+    arr2[x] = arr[i];
+    x++;
+  }
+  printf("Reversed array values : ");
+  for(int i=0; i<=4; i++){
+    printf("%d", arr2[i]);
+  }
+}
+*/
