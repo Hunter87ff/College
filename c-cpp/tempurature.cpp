@@ -1,3 +1,5 @@
+//// WAP that will take input temperature as celsius and print fahrenhit and kelvin:
+
 #include <stdio.h>
 
 int main() {
