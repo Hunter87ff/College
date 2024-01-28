@@ -1,15 +1,15 @@
-// write a program in C to to perform some actions on an array entered by user.
+write a program in C to to perform some actions on an array entered by user. <br>
+a) Print event numbers<br>
+b) print Odd Numbers<br>
+c) Print the sum and average of the elements<br>
+d) print maximum and minimum value<br>
+e) remove duplicate elements<br>
+f) Print the reverse array<br>
+Note : Program should present the menu to the user and ask for one of the option, and should have an option to re entry the array and exit the program
+<br>
 
-// a) Print event numbers
-// b) print Odd Numbers
-// c) Print the sum and average of the elements
-// d) print maximum and minimum value
-// e) remove duplicate elements
-// f) Print the reverse array
 
-// Note : Program should present the menu to the user and ask for one of the option, and should have an option to re entry the array and exit the program
-
-
+```cpp
 #include <stdio.h>
 
 void EvenNum(int arr[], int size) {
@@ -150,3 +150,7 @@ int main() {
 
     return 0;
 }
+```
+
+![2024-01-28-11-59-42](https://github.com/Hunter87ff/College/assets/83773586/fec12ea9-1b7d-4152-a5ba-32ca45cdac28)
+
