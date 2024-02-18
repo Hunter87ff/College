@@ -1,5 +1,4 @@
 #include<stdio.h>
-//arr  = [1,2,3,4,5,6,7,8]
 
 int main(){
 	int arr[100], size, n;
