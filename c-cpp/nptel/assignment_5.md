@@ -1,7 +1,20 @@
 ## Assignment 5
 ### Question 1:
 ```c
-//Comming Soon
+#include <stdio.h>
+int f(int n, int s){
+    if (n==1) return s;
+    s+=1;
+    if (n%2!=0) return f(3*n+1, s);
+    else return f(n/2, s);
+}
+int main(){
+    int n;
+    scanf("%d", &n);
+    int x = f(n, 0);
+    printf("%d", x);
+    return 0;
+}
 ```
 
 
