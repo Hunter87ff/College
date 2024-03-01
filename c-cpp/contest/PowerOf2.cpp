@@ -1,3 +1,8 @@
+/*Description: Check if a given number is a Power of the number 2. Also find which exact Power of 2
+the number is. The code should have O(1) time complexity.
+*/
+
+
 #include <stdio.h>
 #include <math.h>
 int main()
