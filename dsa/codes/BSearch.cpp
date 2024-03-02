@@ -18,9 +18,11 @@ int main() {
     int n = sizeof(arr) / sizeof(arr[0]);
     int target = 6;
     int result = bSearch(arr, 0, n - 1, target);
-    if (result != -1)
+    if (result != -1){
         printf("Element found at index %d.\n", result);
-    else
+    }
+    else{
         printf("Element not found in the array.\n");
+    }
     return 0;
 }
