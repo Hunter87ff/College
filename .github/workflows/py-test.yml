@@ -29,4 +29,4 @@ jobs:
 
     - name: Deploy Check
       run: |
-        python py/print.py
+        python py/nlp.py
