@@ -2,16 +2,16 @@
 
 int bSearch(int arr[], int l, int h, int target) {
     if (l <= h) {
-        int m = l + (h - l) / 2;
-        if (arr[m] == target){
-			return m;
-		}
-        else if (arr[m] > target){
-			return bSearch(arr, l, m - 1, target);
-		}
-        else{
-			return bSearch(arr, m + 1, h, target);
-		}
+       int m = l + (h - l) / 2;
+       if (arr[m] == target){
+			  return m;
+		    }
+      else if (arr[m] > target){
+        return bSearch(arr, l, m - 1, target);
+		  }
+      else{
+        return bSearch(arr, m + 1, h, target);
+		  }
     }
     return -1; 
 }
