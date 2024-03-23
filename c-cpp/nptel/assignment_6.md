@@ -12,7 +12,7 @@ int min(int a, int b){
     return b;}
 
 int main() {
-    int A[100][100]; //{{1,2,3,4},{4,5,6,7}, {7,8,9,1}, {1,2,3,4}};
+    int A[100][100]; 
     int B[100][100];
     int n=4,l=1,sum;
     scanf("%d",&n);
@@ -64,6 +64,6 @@ int main(){
 }
 ```
 ### Question 3:
-```cpp
+```
 In Progress...
 ```
