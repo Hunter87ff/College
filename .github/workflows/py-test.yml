@@ -34,4 +34,4 @@ jobs:
 
       - name: Deploy Check
         run: |
-          python py/mc_server.py
+          python py/nlp.py
