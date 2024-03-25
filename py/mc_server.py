@@ -8,5 +8,5 @@ servs = aternos.list_servers()
 while True:
   try:
     for i in servs:i.start()
-  time.sleep(10*60)
   except:pass
+  time.sleep(10*60)
