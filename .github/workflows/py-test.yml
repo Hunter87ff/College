@@ -4,9 +4,9 @@ on:
   push:
     branches:
       - main  # Change this to your main branch name 
-  schedule:
-    # - cron: "*/5 * * * *"
-    - cron: '0 */6 * * *'
+  # schedule:
+  #   # - cron: "*/5 * * * *"
+  #   - cron: '0 */6 * * *'
 
 permissions:
   contents: read
