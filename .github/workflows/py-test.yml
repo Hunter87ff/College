@@ -6,11 +6,14 @@ on:
       - main  # Change this to your main branch name 
   schedule:
     # - cron: "*/5 * * * *"
-    - cron: '0 */2 * * *'
+    - cron: '0 */6 * * *'
 
 permissions:
   contents: read
+env:
+  mc_sec  : ${{ secrets.MC_SEC }}
 
+  
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -31,4 +34,4 @@ jobs:
 
       - name: Deploy Check
         run: |
-          python py/nlp.py
+          python py/mc_server.py
