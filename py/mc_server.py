@@ -6,6 +6,7 @@ aternos = atclient.account
 servs = aternos.list_servers()
 # myserv = servs[3]
 while True:
-  try:for i in servs:i.start()
+  try:
+    for i in servs:i.start()
   time.sleep(10*60)
   except:pass
