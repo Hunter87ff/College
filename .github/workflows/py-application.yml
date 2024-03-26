@@ -36,7 +36,6 @@ jobs:
       - name: Install ffmpeg
         run: 
           sudo apt-get update && sudo apt-get install -y ffmpeg
-          pip install -r requirements.txt
 
       - name: Deploy Check
         run: |
