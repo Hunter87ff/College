@@ -3,7 +3,8 @@
 # Insta  : https://instagram.com/im_hunter87
 # Youtube: https://youtube.com/@hunter87
 #import numpy as np
-
+import os
+os.system("ffmpeg -version")
 
 def token(q: str) -> str:
     q = q.lower().translate(str.maketrans('', '', '^`~@?,\'"!;:')).replace("  ", " ").replace("\n", "").strip()
