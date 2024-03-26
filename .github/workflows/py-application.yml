@@ -28,15 +28,15 @@ jobs:
           python-version: 3.8 
 
       - name: Install dependencies
+        working-directory: ./py 
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          pip install -r py/requirements.txt
 
       - name: Install ffmpeg
         run: 
           sudo apt-get update && sudo apt-get install -y ffmpeg
           pip install -r requirements.txt
-        working-directory: ./py 
 
       - name: Deploy Check
         run: |
