@@ -12,6 +12,7 @@ permissions:
   contents: read
 env:
   mc_sec  : ${{ secrets.MC_SEC }}
+  AUDIO_HOOK : ${{ secrets.AUDIO_HOOK }}
 
   
 jobs:
@@ -33,9 +34,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Install ffmpeg
-        run: 
-          sudo apt-get update && sudo apt-get install -y ffmpeg
+      # - name: Install ffmpeg
+      #   run: 
+      #     sudo apt-get update && sudo apt-get install -y ffmpeg
 
       - name: Deploy Check
         run: |
