@@ -2,3 +2,4 @@ requests
 python-aternos
 flask
 numpy
+json
