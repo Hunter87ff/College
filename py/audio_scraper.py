@@ -1,7 +1,7 @@
 import json, os
 import requests as req
 songs = []
-for i in range(1, 9001):
+for i in range(2000, 7001):
 	url = f"https://pagalnew.com/download128/{i}"
 	headers = req.get(url).headers
 	print(f"{i}: ", headers["Content-Disposition"].split('"')[1])
