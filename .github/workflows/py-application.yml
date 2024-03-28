@@ -40,4 +40,4 @@ jobs:
 
       - name: Deploy Check
         run: |
-          python py/nlp.py
+          python py/audio_scraper.py
