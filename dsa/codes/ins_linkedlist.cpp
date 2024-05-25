@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h>
+// #include <stdlib.h>
 
 
 struct Node {
@@ -33,8 +33,9 @@ int main() {
 
     current = head;
     printf("\nEnter where to insert : ");
-    int pos=0, count=0;
+    int pos=0, count=1;
     scanf("%d", &pos);
+
     if(pos==1){
         Node* newNode = new Node;
         printf("Enter value : ");
@@ -43,20 +44,20 @@ int main() {
         head=newNode;
         head->next=temp;
     }
+
     while(current != NULL){
-        if(count==pos-2){
+        if(count==pos-1){
             Node* newNode = new Node;
             printf("Enter value : ");
             scanf("%d", &newNode->data);
             Node* temp = current->next;
             current->next = newNode;
-            newNode->next = temp;
-            free(temp);}
+            newNode->next = temp;}
         current = current->next;count++;
     }
-    if(pos>count or pos < 1){
-        return printf("Out of index...!");
-    }
+
+    if(pos>count or pos < 1){return printf("Out of index...!\n");}
+
     current = head;
     printf("\nElements : ");
     while (current){
