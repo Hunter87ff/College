@@ -1,7 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-
 struct Node {
     int data;
     Node* next;
@@ -18,13 +16,12 @@ int main() {
 
         if (head == NULL) {
             head = newNode; 
-            current = newNode; 
-        }else{
+            current = newNode; }
+        else{
             current->next = newNode; 
-            current = newNode;
-        }
+            current = newNode;}
     }
-        while(true){
+    while(true){
         current = head;
         if(!head){return printf("linked List Cleared\n");}
         printf("\nElements : ");
@@ -59,7 +56,6 @@ int main() {
         printf("\nElements : ");
         while (current){
             printf("%d ", current->data);
-            current = current->next;}
-    }
+            current = current->next;}}
     return 0;
 }
