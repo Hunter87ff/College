@@ -25,6 +25,7 @@ class Member{
 			book.is_available=false;
 			return true;
 		}
+	//  TODO : book returning method 
 }
 
 class Book {
@@ -45,6 +46,7 @@ class Book {
 public class Library{
     public static void main(String[] x){
     	Book[] lbooks = new Book[10];
+	// TODO : add options to create users, select options to search, borrow, return books
 		
     	String[] author = {"hunter87", "debajit", "Raitig"};
     	String[] bookn = {"Socket Server", "Food factor", "Rage Ranger"};
