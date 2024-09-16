@@ -16,7 +16,7 @@ jobs:
       uses: actions/setup-java@v3
       with:
         distribution: 'temurin' # Install OpenJDK from the AdoptOpenJDK distribution
-        java-version: '17'
+        java-version: '21'
     
     - name: Verify Java version
       run: java -version
