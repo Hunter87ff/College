@@ -22,5 +22,4 @@ jobs:
       run: java -version
 
     - name: Run server
-      run: java -Xmx1024M -Xms1024M -jar server.jar nogui
-      working-directory: ./linux/ms_server/
+      run: cd linux/mc_server && java -Xmx1024M -Xms1024M -jar server.jar nogui
