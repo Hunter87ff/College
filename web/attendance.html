@@ -38,6 +38,7 @@
         std_codes.innerHTML = content; content="";
 
         function fetch_codes(){
+            present_codes = []; absent_codes = [];
             std_present = selAll(".std_present:checked");
             std_present.forEach((std)=>{present_codes.push(std.id);})
             ALL_CODES.forEach((code)=>{if(!present_codes.includes(code.toString())){absent_codes.push(code);}})
