@@ -10,9 +10,10 @@
     <div class="header text-center bg-gray-900 text-white py-4 ">ATTENDANCE</div>
     <div class="container  text-white w-screen m-2">
         <div class="student_codes"></div>
+        <input type="checkbox" id="copy_confirm" class="m-2 h-4 w-4"><label class="text-lg">Copy To Clipboard</label> <br>
         <button class="bg-green-600 rounded px-4 py-2" id="fetch_btn" onclick="fetch_codes()">Fetch</button> 
         <button id="show_text" class="m-1 bg-blue-600 rounded px-2 py-2" onclick="show_text()">Show Text</button>
-        <button id="share_btn" class="bg-blue-600 rounded px-2 py-2" onclick="Share()">Share</button>
+        <button id="share_btn" class="bg-blue-600 rounded px-2 py-2" onclick="Share()">Share</button> <br> 
         <textarea class="rounded m-1 w-10/12" id="output" style="display: none; border:none; background: black; color: greenyellow;"></textarea>
     </div>
     <script>
@@ -26,24 +27,28 @@
             649, 650, 652, 653, 654, 655, 656, 658, 659, 660, 728
         ]
         let content = "";
-        let std_codes = sel(".student_codes");
-
         let std_present = [];
         let present_codes = [];
         let absent_codes = [];
         let output = sel("#output");
         let show_text_btn = sel("#show_text");
+        let std_codes = sel(".student_codes");
+        let copy_confirmation =   sel("#copy_confirm");
+
 
         ALL_CODES.forEach((code)=>{content += `<input id="${code}" type="checkbox" class="m-2 std_present h-4 w-4"/><label for="${code}" class="text-lg">BWU/BCA/23/${code}</label><br>`})
         std_codes.innerHTML = content; content="";
 
+        function CopyContent(content){try{navigator.clipboard.writeText(content);}catch(e){console.log(e);}}
+
         function fetch_codes(){
-            present_codes = []; absent_codes = [];
+            present_codes = [];
+            absent_codes = [];
             std_present = selAll(".std_present:checked");
             std_present.forEach((std)=>{present_codes.push(std.id);})
             ALL_CODES.forEach((code)=>{if(!present_codes.includes(code.toString())){absent_codes.push(code);}})
             content = `Present: ${present_codes.length}\n${present_codes.length>=1?"BWU/BCA/23/":""}${present_codes.join("\nBWU/BCA/23/")}\n\nAbsent: ${absent_codes.length}\nBWU/BCA/23/${absent_codes.join("\nBWU/BCA/23/")}`;
-            try{navigator.clipboard.writeText(content);console.log(content)}catch(e){console.log(e);}
+            if(copy_confirmation.checked){CopyContent(content);}
             output.value = content;
         }
 
@@ -55,7 +60,6 @@
         function Share(){
             fetch_codes();
             window.open(`whatsapp://send?text=${encodeURIComponent(content)}`);
-            //try{navigator.share({title: "Attendance", text: (std_present.length>=1?"Not Fetched":content), url: window.location.href})}catch(e){console.log(e);}
         }
     </script>
 </body>
