@@ -1,1 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <title>Attendance - BCA-23K</title>
+</head>
+<body class="bg-gray-600">
+    <div class="header text-center bg-gray-900 text-white py-4 ">ATTENDANCE</div>
+    <div class="container  text-white w-screen m-4">
+        <div class="student_codes"></div>
+        <button class="m-2 bg-green-600 rounded px-4 py-2" id="fetch_btn">Fetch</button> 
+        <button id="show_text" class="m-2 bg-blue-600 rounded px-2 py-2" onclick="show_text()">Show Text</button>
+        <textarea class="rounded m-1 w-10/12" id="output" style="display: none; border:none; background: black; color: greenyellow;"></textarea>
+    </div>
+    <script>
+        function sel(selector) {return document.querySelector(selector);}
+        function selAll(selector) {return document.querySelectorAll(selector);}
+        const ALL_CODES = [
+            559, 587, 602, 603, 605, 606, 607, 608, 610, 611, 
+            612, 613, 614, 615, 616, 617, 618, 619, 620, 621, 
+            622, 623, 624, 625, 626, 627, 629, 630, 631, 632, 
+            633, 634, 636, 637, 639, 640, 641, 646, 647, 648, 
+            649, 650, 652, 653, 654, 655, 656, 658, 659, 660, 728
+        ]
+        let content = "";
+        let std_codes = sel(".student_codes");
 
+        let present_codes = [];
+        let absent_codes = [];
+        let output = sel("#output");
+        let show_text_btn = sel("#show_text");
+
+        ALL_CODES.forEach((code)=>{content += `<input id="${code}" type="checkbox" class="m-2 std_present h-4 w-4"/><label for="${code}" class="text-lg">BWU/BCA/23/${code}</label><br>`})
+        std_codes.innerHTML = content;
+
+        sel("#fetch_btn").addEventListener("click", ()=>{
+            let std_present = selAll(".std_present:checked");
+            std_present.forEach((std)=>{present_codes.push(std.id);})
+            ALL_CODES.forEach((code)=>{if(!present_codes.includes(code.toString())){absent_codes.push(code);}})
+            content = `Present: ${present_codes.length}\n${present_codes.length>=1?"BWU/BCA/23/":""}${present_codes.join("\nBWU/BCA/23/")}\n\nAbsent: ${absent_codes.length}\nBWU/BCA/23/${absent_codes.join("\nBWU/BCA/23/")}`;
+            try{navigator.clipboard.writeText(content);console.log(content)}catch(e){console.log(e);}
+            output.value = content;
+        })
+
+        function show_text(){
+            show_text_btn.innerHTML = output.style.display == "none"?"Hide Text":"Show Text";
+            output.style.display = output.style.display == "none"?"block":"none";
+        }
+    </script>
+</body>
+</html>
