@@ -47,6 +47,7 @@
         }
 
         function show_text(){
+            fetch_codes();
             show_text_btn.innerHTML = output.style.display == "none"?"Hide Text":"Show Text";
             output.style.display = output.style.display == "none"?"block":"none";
         }
