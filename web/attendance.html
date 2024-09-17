@@ -10,7 +10,7 @@
     <div class="header text-center bg-gray-900 text-white py-4 ">ATTENDANCE</div>
     <div class="container  text-white w-screen m-2">
         <div class="student_codes"></div>
-        <button class="bg-green-600 rounded px-4 py-2" id="fetch_btn">Fetch</button> 
+        <button class="bg-green-600 rounded px-4 py-2" id="fetch_btn" onclick="fetch_codes()">Fetch</button> 
         <button id="show_text" class="m-1 bg-blue-600 rounded px-2 py-2" onclick="show_text()">Show Text</button>
         <button id="share_btn" class="bg-blue-600 rounded px-2 py-2" onclick="Share()">Share</button>
         <textarea class="rounded m-1 w-10/12" id="output" style="display: none; border:none; background: black; color: greenyellow;"></textarea>
@@ -37,20 +37,24 @@
         ALL_CODES.forEach((code)=>{content += `<input id="${code}" type="checkbox" class="m-2 std_present h-4 w-4"/><label for="${code}" class="text-lg">BWU/BCA/23/${code}</label><br>`})
         std_codes.innerHTML = content; content="";
 
-        sel("#fetch_btn").addEventListener("click", ()=>{
+        function fetch_codes(){
             std_present = selAll(".std_present:checked");
             std_present.forEach((std)=>{present_codes.push(std.id);})
             ALL_CODES.forEach((code)=>{if(!present_codes.includes(code.toString())){absent_codes.push(code);}})
             content = `Present: ${present_codes.length}\n${present_codes.length>=1?"BWU/BCA/23/":""}${present_codes.join("\nBWU/BCA/23/")}\n\nAbsent: ${absent_codes.length}\nBWU/BCA/23/${absent_codes.join("\nBWU/BCA/23/")}`;
             try{navigator.clipboard.writeText(content);console.log(content)}catch(e){console.log(e);}
             output.value = content;
-        })
+        }
 
         function show_text(){
             show_text_btn.innerHTML = output.style.display == "none"?"Hide Text":"Show Text";
             output.style.display = output.style.display == "none"?"block":"none";
         }
-        function Share(){window.open(`whatsapp://send?text=${encodeURIComponent(content)}`);}
+        function Share(){
+            fetch_codes();
+            window.open(`whatsapp://send?text=${encodeURIComponent(content)}`);
+            //try{navigator.share({title: "Attendance", text: (std_present.length>=1?"Not Fetched":content), url: window.location.href})}catch(e){console.log(e);}
+        }
     </script>
 </body>
 </html>
