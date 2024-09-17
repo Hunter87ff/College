@@ -47,7 +47,7 @@
             std_present = selAll(".std_present:checked");
             std_present.forEach((std)=>{present_codes.push(std.id);})
             ALL_CODES.forEach((code)=>{if(!present_codes.includes(code.toString())){absent_codes.push(code);}})
-            content = `Present: ${present_codes.length}\n${present_codes.length>=1?"BWU/BCA/23/":""}${present_codes.join("\nBWU/BCA/23/")}\n\nAbsent: ${absent_codes.length}\nBWU/BCA/23/${absent_codes.join("\nBWU/BCA/23/")}`;
+            content = `Present: ${present_codes.length}\n${present_codes.length>=1?"BWU/BCA/23/":""}${present_codes.join("\nBWU/BCA/23/")}\n\nAbsent: ${absent_codes.length}\n${present_codes.length==0?"BWU/BCA/23/":""}${absent_codes.join("\nBWU/BCA/23/")}`;
             if(copy_confirmation.checked){CopyContent(content);}
             output.value = content;
         }
