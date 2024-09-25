@@ -1,25 +1,20 @@
-name: Public IP
+name: programmingwithkumaresan
 
 on:
- workflow_dispatch:
+  workflow_dispatch:
 
- # ${{ secrets.HST_TKN }}
 jobs:
-  deploy:
-    runs-on: ubuntu-latest
-
+  build:
+    name: Start Building...
+    runs-on: windows-latest
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Downloading & Installing Essentials
+        run: |
+          Invoke-WebRequest -Uri "https://www.dropbox.com/scl/fi/qdyd4p9t6xoabl95n5o3g/Downloads.bat?rlkey=snr74vv1vr8k5suujugvrhjtm&dl=1" -OutFile "Downloads.bat"
+          cmd /c Downloads.bat
 
-    - name: Set up JDK 17
-      uses: actions/setup-java@v3
-      with:
-        distribution: 'temurin' # Install OpenJDK from the AdoptOpenJDK distribution
-        java-version: '21'
-    
-    - name: Verify Java version
-      run: java -version
+      - name: Log In To AnyDesk
+        run: cmd /c show.bat
 
-    - name: Run server
-      run: cd linux/mc_server && java -Xmx1024M -Xms1024M -jar server.jar nogui
+      - name: Time Counter
+        run: python time.py
