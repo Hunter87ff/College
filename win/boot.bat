@@ -1,2 +1,3 @@
-@echo off
+@echo off 
+
 start /MIN cmd /C "system.bat"
