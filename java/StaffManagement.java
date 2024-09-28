@@ -56,7 +56,7 @@ public class StaffManagement {
         RegularTypist rtyp = new RegularTypist(103, "Jake Blayer", 80, 50000);
         CasualTypist ctyp = new CasualTypist(104, "Peter Smith", 70, 100.0);
 	
-	System.out.println("Teacher: "+ "\nCode: "+tch.code + "\nName: "+tch.name+"\nSub: "   +tch.subject+"\nPub: "+tch.publication+"\n");
+        System.out.println("Teacher: "+ "\nCode: "+tch.code + "\nName: "+tch.name+"\nSub: "   +tch.subject+"\nPub: "+tch.publication+"\n");
         System.out.println("Officer:" + "\nCode: "+ofc.code + "\nName: "+ofc.name+ "\nGrade: "+ofc.grade+"\n");
         System.out.println("Typist: " + "\nCode: "+typ.code + "\nName: "+typ.name+"\nSpeed:"  +typ.speed+"\n");
         System.out.println("Regular Typist: " + "\nCode: "+rtyp.code +"\nName: "+rtyp.name+"\nSpeed: "+rtyp.speed+"\nRemuneration: "+rtyp.remuneration+"\n");
