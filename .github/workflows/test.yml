@@ -26,5 +26,5 @@ jobs:
 
     - name: Deployment
       run: |
-        python app.py
+        python py/attendance.py
  
