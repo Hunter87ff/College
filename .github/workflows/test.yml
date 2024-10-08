@@ -12,7 +12,7 @@ jobs:
       - name: Check Dir
         run: |
           ls
-        working-directory: ./py
+        working-directory: ./
         
       - name: Set up Python
         uses: actions/setup-python@v2
