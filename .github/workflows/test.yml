@@ -9,7 +9,10 @@ jobs:
     name: Setup Machine
     runs-on: ubuntu-latest
     steps:
-
+      - name: Check Dir
+        run: |
+          ls
+          
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
@@ -28,7 +31,7 @@ jobs:
 
       - name: Run app
         run: |
-          ls
+          echo "dir fucked"
         # pip install flask
         # python app.py
         # working-directory: ../py/
