@@ -10,4 +10,4 @@ jobs:
     steps:
       - name: Setup Coolify
         run: |
-          curl -fsSL https://cdn.coollabs.io/coolify/install.sh | bash
+          sudo apt-get update && sudo apt-get install cloudflared
