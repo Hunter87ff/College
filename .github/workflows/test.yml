@@ -29,6 +29,6 @@ jobs:
       - name: Run app
         run: |
             pip install flask
-            python app.py
-        working-directory: ../py/
+            python py/app.py
+        # working-directory: ../py/
          
