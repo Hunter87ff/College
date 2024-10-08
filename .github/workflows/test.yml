@@ -23,7 +23,7 @@ jobs:
 
       - name: Setup Service
         run: |
-            cloudflared.exe service install ${{ secrets.CF_KEY }}
+            cloudflared service install ${{ secrets.CF_KEY }}
 
       - name: Run app
         run: |
