@@ -43,7 +43,7 @@ class Book {
 }
 
 
-public class Library{
+public class Assignment3{
     public static void main(String[] x){
     	Book[] lbooks = new Book[10];
 	// TODO : add options to create users, select options to search, borrow, return books
