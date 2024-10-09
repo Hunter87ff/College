@@ -48,7 +48,7 @@ class CasualTypist extends Typist{
 
 
 
-public class StaffManagement {
+public class Assignment5 {
     public static void main(String[] x){
         Teacher tch = new Teacher(100, "Hunter87", "ReactJS", "React Foundation");
         Officer ofc = new Officer(101, "Blake Dawson", "O");
