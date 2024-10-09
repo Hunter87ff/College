@@ -33,7 +33,7 @@ class PartTimeEmployee extends Employee{
 }
 
 
-public class EmployeeSal {
+public class Assignment6 {
     public static void main(String[] x){
         FullTimeEmployee fte = new FullTimeEmployee("Raitig", 101, 50000);
         PartTimeEmployee pte = new PartTimeEmployee("Rahul", 102, 100, 40);
