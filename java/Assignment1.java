@@ -5,6 +5,6 @@ class Calc{
 
 }
 
-class calculator{
+class Assignment1{
     public static void main(String[] args){}
 }
