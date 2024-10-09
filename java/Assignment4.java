@@ -17,7 +17,7 @@ class Grader{
 	}
 }
 
-class GradeSystem{
+class Assignment4{
 	public static void main(String[] x){
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter Your score : ");
