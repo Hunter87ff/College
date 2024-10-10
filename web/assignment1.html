@@ -36,7 +36,8 @@
                 try{
                     let queries = ["#fname", "#femail", "#age", "input[name='gender']:checked", "#country", "#comments", "#newsletter"];
                     let elements = queries.map(id => document.querySelector(id));
-                    if(elements[0].value.length>3 || elements[0].value.length < 20){return alert("Name must be within 3 and 20 characters.");}
+                    console.log(elements[0].value);
+                    if(elements[0].value.length<3 || elements[0].value.length > 20){return alert("Name must be within 3 and 20 characters.");}
                     if(elements[1].value.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/) == null) return alert("Invalid Email");
                     outputDiv.innerHTML = `
                     Name : ${elements[0].value}<br>
