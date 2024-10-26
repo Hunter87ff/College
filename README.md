@@ -1,6 +1,3 @@
-
-[![PY Tests](https://github.com/Hunter87ff/College/actions/workflows/py-test.yml/badge.svg)](https://github.com/Hunter87ff/College/actions/workflows/py-test.yml)
-<br>
 [![OS](https://img.shields.io/badge/OS-Windows-informational?style=flat&logo=windows&logoColor=white&color=61D9FA&labelColor=20232A)](#)
 [![OS](https://img.shields.io/badge/OS-Linux-informational?style=flat&logo=linux&logoColor=white&color=61D9FA&labelColor=20232A)](#)
 <br>
