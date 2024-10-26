@@ -1,12 +1,13 @@
+[![Repo Size](https://img.shields.io/github/repo-size/hunter87ff/college)](#)
 [![OS](https://img.shields.io/badge/OS-Windows-informational?style=flat&logo=windows&logoColor=white&color=61D9FA&labelColor=20232A)](#)
 [![OS](https://img.shields.io/badge/OS-Linux-informational?style=flat&logo=linux&logoColor=white&color=61D9FA&labelColor=20232A)](#)
 <br>
 [![Lang](https://img.shields.io/badge/Lang-C/CPP-purple.svg)](#)
 [![Lang](https://img.shields.io/badge/Lang-Python-blue.svg)](https://www.python.org/)
 [![Lang](https://img.shields.io/badge/Lang-PHP-skyblue.svg)](https://php.net)
-[![Lang](https://img.shields.io/badge/Lang-JavaScript-yellow.svg)](https://www.python.org/)
+[![Lang](https://img.shields.io/badge/Lang-JavaScript-yellow.svg)](https://www.w3schools.com/js/)
+[![Lang](https://img.shields.io/badge/Lang-Java-orange.svg)](https://www.java.com/)
 <br>
-[![repo size](https://img.shields.io/github/repo-size/hunter87ff/college)](#)
 <!--Colors
 brightgreen
 green
