@@ -105,7 +105,7 @@ o	Ensure the page is styled using CSS to make the form and results section visua
     </body>
 </html>
 ```
-
+# Output [Screenshot]
 
 
 ![Screenshot](https://github.com/user-attachments/assets/bde89f8d-ec62-4d70-ad47-4d7569869a52)
