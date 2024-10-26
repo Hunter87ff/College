@@ -18,21 +18,19 @@ o	Store the list of favorite fruits selected by the user in an array.
 o	Display the selected fruits in the results section after the form is submitted.
 ## 4.	Function Declarations:
 o	Write functions for:
-	Validation: Check if all required fields are filled and valid. Display an alert if any validation fails.
-	Form Submission: Handle form submission, prevent the default action, and display the user's input in a formatted way in the results section.
-	DOM Manipulation: Update the content dynamically using DOM methods (e.g., getElementById(), innerHTML, etc.).
+- 	Validation: Check if all required fields are filled and valid. Display an alert if any validation fails.
+- 	Form Submission: Handle form submission, prevent the default action, and display the user's input in a formatted way in the results section.
+- 	DOM Manipulation: Update the content dynamically using DOM methods (e.g., getElementById(), innerHTML, etc.).
 ## 5.	DOM Manipulation:
-o	Access and manipulate various form elements using JavaScript:
-	Change the background color of the results section after form submission.
-	Display a list of favorite fruits selected by the user using a loop to iterate over the array.
+- o	Access and manipulate various form elements using JavaScript:
+- 	Change the background color of the results section after form submission.
+- 	Display a list of favorite fruits selected by the user using a loop to iterate over the array.
 ## 6.	Additional Requirements:
 o	Ensure the page is styled using CSS to make the form and results section visually appealing.
-o	Use JavaScript to handle the following events:
-	Click Event: Change the text of a button when it is clicked.
-	Mouseover Event: Change the color of a heading when the mouse hovers over it.
-o	Include a reset button to clear the form and results section.
-
-
+### o	Use JavaScript to handle the following events:
+- 	Click Event: Change the text of a button when it is clicked.
+- 	Mouseover Event: Change the color of a heading when the mouse hovers over it.
+- o	Include a reset button to clear the form and results section.
 
 ```html
 <!DOCTYPE html>
