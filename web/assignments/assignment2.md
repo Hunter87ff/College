@@ -72,7 +72,7 @@ o	Include a reset button to clear the form and results section.
             <input type="checkbox" id="newsletter"> <label for="newsletter">Subscribe to newsletter</label><br>
             <label for="comments">Comments:</label><br>
             <textarea id="comments" cols="30" rows="5"  placeholder="Enter your comment"></textarea><br>
-            <button >Submit</button>
+            <button >Submit</button> <button type="reset">Reset</button>
             <div id="output" style="padding:1rem; border-radius:5px; background:#e0dfdf;"></div>
         </form>
         
@@ -107,4 +107,6 @@ o	Include a reset button to clear the form and results section.
 ```
 
 
-![image](https://github.com/user-attachments/assets/4b5780c1-e457-4c86-b327-a35580027a34)
+
+![Screenshot](https://github.com/user-attachments/assets/bde89f8d-ec62-4d70-ad47-4d7569869a52)
+
