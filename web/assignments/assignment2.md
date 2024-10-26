@@ -41,6 +41,7 @@ o	Ensure the page is styled using CSS to make the form and results section visua
         <style>form *{margin: 4px 0;} #dform{border-radius: 5px; border: solid 1px gray; padding: 1rem;}</style>
     </head>
     <body style="display: grid; place-items: center;">
+        <h2 onmouseover="this.style.color='red'">Form Info</h2>
         <form  id="dform">
             <label for="fname">Name:</label>
             <input id="fname" required placeholder="Enter your name"><br>
@@ -70,7 +71,8 @@ o	Ensure the page is styled using CSS to make the form and results section visua
             <input type="checkbox" id="newsletter"> <label for="newsletter">Subscribe to newsletter</label><br>
             <label for="comments">Comments:</label><br>
             <textarea id="comments" cols="30" rows="5"  placeholder="Enter your comment"></textarea><br>
-            <button >Submit</button> <button type="reset">Reset</button>
+            <button onclick="this.innerHTML='Submited'" >Submit</button>
+            <button type="reset">Reset</button>
             <div id="output" style="padding:1rem; border-radius:5px; background:#e0dfdf;"></div>
         </form>
         
