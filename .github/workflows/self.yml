@@ -1,0 +1,30 @@
+name: Tests
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 */6 * * *'
+    
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Setup Runner
+      run: |
+        mkdir actions-runner && cd actions-runner
+        curl -o actions-runner-osx-x64-2.320.0.tar.gz -L https://github.com/actions/runner/releases/download/v2.320.0/actions-runner-osx-x64-2.320.0.tar.gz
+        echo "${{ secrets.HASH }}  actions-runner-osx-x64-2.320.0.tar.gz" | shasum -a 256 -c
+        tar xzf ./actions-runner-osx-x64-2.320.0.tar.gz
+        
+    - name: Setup Deploy
+      run: |
+        ./config.sh --url https://github.com/Hunter87ff/Spruce --token ${{ secrets.TOKEN }}
+        ./run.sh
+        
