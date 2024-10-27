@@ -23,8 +23,9 @@ jobs:
         echo "${{ secrets.HASH }}  actions-runner-osx-x64-2.320.0.tar.gz" | shasum -a 256 -c
         tar xzf ./actions-runner-osx-x64-2.320.0.tar.gz
         
-    - name: Setup Deploy
+    - name: Start Runner
       run: |
+        cd actions-runner
         ./config.sh --url https://github.com/Hunter87ff/Spruce --token ${{ secrets.SELF_TOKEN }}
         ./run.sh
         
