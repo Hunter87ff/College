@@ -25,6 +25,6 @@ jobs:
         
     - name: Setup Deploy
       run: |
-        ./config.sh --url https://github.com/Hunter87ff/Spruce --token ${{ secrets.TOKEN }}
+        ./config.sh --url https://github.com/Hunter87ff/Spruce --token ${{ secrets.SELF_TOKEN }}
         ./run.sh
         
