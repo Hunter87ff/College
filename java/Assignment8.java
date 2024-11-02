@@ -9,7 +9,9 @@ public class Assignment8{
             }
             System.out.println("\033[1;32mLargest : " + largest); 
         } 
-        catch (NumberFormatException e) {System.out.println("\033[1;31m" + "Error: " + e.toString());}
+        catch (NumberFormatException e) {
+            System.out.println("\033[1;31m" + "Error: " + e.toString());
+        }
         System.out.print("\033[0m");
     }
 }
