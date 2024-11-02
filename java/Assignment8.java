@@ -1,6 +1,7 @@
-class Assignment8{
+public class Assignment8{
     public static void main(String[] x){
-        int largest = 0, num;
+        int largest = Integer.MIN_VALUE, num;
+        if(x.length==0){System.out.println("\033[1;31m" + "Error: No input provided");System.out.print("\033[0m");return;}
         try {
             for (String x1 : x) {
                 num = Integer.parseInt(x1);
