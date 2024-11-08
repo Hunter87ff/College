@@ -51,8 +51,8 @@ class CasualTypist extends Typist{
 public class Assignment5 {
     public static void main(String[] x){
         Teacher tch = new Teacher(100, "Hunter87", "ReactJS", "React Foundation");
-        Officer ofc = new Officer(101, "Blake Dawson", "O");
-        Typist typ = new Typist(102, "Ammi Smith", 60);
+        Officer ofc = new Officer(101, "Neha", "O");
+        Typist typ = new Typist(102, "Sourav", 60);
         RegularTypist rtyp = new RegularTypist(103, "Jake Blayer", 80, 50000);
         CasualTypist ctyp = new CasualTypist(104, "Peter Smith", 70, 100.0);
 	
