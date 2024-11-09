@@ -1,6 +1,6 @@
 import java.util.Vector;
 
-public class Assignment11 {
+public class Assignment_11 {
     public static void main(String[] x) {
         Vector<String> names = new Vector<>();
         names.add("hunter87");
