@@ -4,7 +4,7 @@ class NoMatchFoundException extends Exception {
     /* Returns an Exception */
 }
 
-public class Assignment10 {
+public class Assignment_10 {
     public static void main(String[] x) {
         String s1 = "University";
         System.out.println("Enter String : ");
