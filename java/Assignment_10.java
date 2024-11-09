@@ -1,7 +1,9 @@
 import java.util.Scanner;
 
 class NoMatchFoundException extends Exception {
-    /* Returns an Exception */
+    NoMatchFoundException(String message) {
+        super(message);
+    }
 }
 
 public class Assignment_10 {
@@ -12,12 +14,12 @@ public class Assignment_10 {
         String s2 = inp.next();
         try {
             if (!s1.equals(s2)) {
-                throw new NoMatchFoundException();
+                throw new NoMatchFoundException("No match Found : " + s2);
             } else {
                 System.out.println("Strings are equal");
             }
         } catch (NoMatchFoundException e) {
-            System.out.println("No match found");
+            System.out.println(e.getMessage());
         }
     }
 }
