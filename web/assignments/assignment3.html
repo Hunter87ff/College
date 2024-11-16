@@ -1,0 +1,41 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List - Assignment3</title>
+</head> 
+<body>
+    <h2>To-Do List</h2>
+    <input type="text" id="newItem" placeholder="Add a new task">
+    <button onclick="addTask(document.querySelector('#newItem').value)">Add Task</button>
+    <button onclick="removeAll()">Remove All Tasks</button>
+    <p>Task Count: <span id="taskCount">0</span></p>
+    <ul id="todoList"> </ul>
+
+    <script>
+        let taskCount = 0;
+        let tasks = document.getElementById("taskCount");
+        let todoList = document.getElementById("todoList");
+        function removeTask(taskId){
+            let task = document.getElementById(`task-${taskId}`);
+            todoList.removeChild(task);
+            tasks.innerText = --taskCount;
+        }
+        function addTask(content){
+            let newItem = `
+            <li id="task-${taskCount}">
+                <p>${content}</p>
+                <button onclick="removeTask(${taskCount})">Remove</button>
+            </li>`; 
+            todoList.innerHTML += newItem;
+            tasks.innerText = ++taskCount;
+        }
+        function removeAll(){
+            todoList.innerHTML = "";
+            taskCount = 0;
+            tasks.innerText = taskCount;
+        }
+    </script>
+</body>
+</html>
