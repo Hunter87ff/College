@@ -1,32 +1,89 @@
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do List - Assignment3</title>
-</head> 
+    <title>JavaScript DOM Manipulation Assignment</title>
+    <link rel="stylesheet" href="Assignment3.css">
+</head>
 <body>
-    <h2>To-Do List</h2>
-    <input type="text" id="newItem" placeholder="Add a new task">
-    <button onclick="addTask(document.querySelector('#newItem').value)">Add Task</button>
-    <p>Task Count: <span id="taskCount">0</span></p>
-    <ul id="todoList"></ul>
+    <h1 id="headerTitle">Welcome to the Page</h1>
+    <div id="contentArea">
+        <p class="description">This is a brief description of the content on this page.</p>
+        <p class="description">Another description paragraph.</p>
+    </div>
+    <input type="text" name="username" id="usernameInput" placeholder="Enter your username">
+    <button id="submitButton">Submit</button>
+    <button id="toggleButton">Toggle Content Area</button>
+    <br><br>
+    <a id="myLink" href="#">Click me</a>
+    <p id="outputArea"></p>
+
     <script>
-        let taskCount = 0;
-        let tasks = document.getElementById("taskCount");
-        let todoList = document.getElementById("todoList");
-        function removeTask(taskId){
-            let task = document.getElementById(`task-${taskId}`);
-            todoList.removeChild(task);
-            tasks.innerText = --taskCount;}
-        function addTask(content){
-            if (content === "") return alert("Please enter a task");
-            let newItem = `
-            <li id="task-${taskCount}">
-                <p>${content}</p><button onclick="removeTask(${taskCount})">Remove</button>
-            </li>`; 
-            todoList.innerHTML += newItem;
-            tasks.innerText = ++taskCount;}
+// Part 1: Basic Selectors
+
+// Change the text of the headerTitle
+document.getElementById("headerTitle").textContent = "JavaScript DOM Manipulation";
+
+// Change the text color of all paragraphs with class 'description' to blue
+let descriptions = document.getElementsByClassName("description");
+for (let i = 0; i < descriptions.length; i++) {
+    descriptions[i].style.color = "blue";
+}
+
+// Change the font style of all divs to italic
+let divs = document.getElementsByTagName("div");
+for (let i = 0; i < divs.length; i++) {
+    divs[i].style.fontStyle = "italic";
+}
+
+// Add the class 'highlight' to the first paragraph element found
+document.querySelector("p").classList.add("highlight");
+
+// Change the background color of all buttons to green
+let buttons = document.querySelectorAll("button");
+buttons.forEach(button => {
+    button.style.backgroundColor = "green";
+});
+
+// Part 2: Getter and Setter Values
+
+// Display the value from the input field in the outputArea when the button is clicked
+document.getElementById("submitButton").addEventListener("click", function() {
+    let inputValue = document.getElementById("usernameInput").value;
+    document.getElementById("outputArea").textContent = "You entered: " + inputValue;
+
+    // Clear the input field after displaying the value
+    document.getElementById("usernameInput").value = "";
+});
+
+// Part 3: Handling Attributes
+
+// Get the href value from the link and display it in the outputArea
+let link = document.getElementById("myLink");
+document.getElementById("outputArea").textContent = "Link URL: " + link.getAttribute("href");
+
+// Change the href of the link to https://www.example.com and update its text
+link.setAttribute("href", "https://www.example.com");
+link.textContent = "Go to Example";
+
+// Remove the href attribute from the link and update the outputArea
+link.removeAttribute("href");
+document.getElementById("outputArea").textContent = "Link is now disabled";
+
+// Check if the link still has an href attribute and display a message in the outputArea
+if (!link.hasAttribute("href")) {
+    document.getElementById("outputArea").textContent = "The link is no longer active.";
+}
+
+// Bonus: Toggle the visibility of the contentArea when the toggle button is clicked
+document.getElementById("toggleButton").addEventListener("click", function() {
+    let contentArea = document.getElementById("contentArea");
+    if (contentArea.style.display === "none") {
+        contentArea.style.display = "block";
+    } else {
+        contentArea.style.display = "none";
+    }
+});
     </script>
 </body>
 </html>
