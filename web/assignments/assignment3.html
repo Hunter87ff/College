@@ -3,87 +3,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript DOM Manipulation Assignment</title>
-    <link rel="stylesheet" href="Assignment3.css">
+    <!-- <link rel="stylesheet" href="Assignment3.css"> -->
+    <style>.hide {display: none!important;}</style>
 </head>
 <body>
     <h1 id="headerTitle">Welcome to the Page</h1>
     <div id="contentArea">
-        <p class="description">This is a brief description of the content on this page.</p>
+        <p class="description">Brief description of the content on this page.</p>
         <p class="description">Another description paragraph.</p>
     </div>
-    <input type="text" name="username" id="usernameInput" placeholder="Enter your username">
-    <button id="submitButton">Submit</button>
-    <button id="toggleButton">Toggle Content Area</button>
-    <br><br>
+    <input type="text" name="username" id="username" placeholder="Enter your username">
+    <button id="sub-btn">Submit</button>
+    <button id="toggleButton">Toggle Content Area</button><br>
     <a id="myLink" href="#">Click me</a>
     <p id="outputArea"></p>
-
     <script>
-// Part 1: Basic Selectors
-
-// Change the text of the headerTitle
-document.getElementById("headerTitle").textContent = "JavaScript DOM Manipulation";
-
-// Change the text color of all paragraphs with class 'description' to blue
-let descriptions = document.getElementsByClassName("description");
-for (let i = 0; i < descriptions.length; i++) {
-    descriptions[i].style.color = "blue";
-}
-
-// Change the font style of all divs to italic
-let divs = document.getElementsByTagName("div");
-for (let i = 0; i < divs.length; i++) {
-    divs[i].style.fontStyle = "italic";
-}
-
-// Add the class 'highlight' to the first paragraph element found
-document.querySelector("p").classList.add("highlight");
-
-// Change the background color of all buttons to green
-let buttons = document.querySelectorAll("button");
-buttons.forEach(button => {
-    button.style.backgroundColor = "green";
-});
-
-// Part 2: Getter and Setter Values
-
-// Display the value from the input field in the outputArea when the button is clicked
-document.getElementById("submitButton").addEventListener("click", function() {
-    let inputValue = document.getElementById("usernameInput").value;
-    document.getElementById("outputArea").textContent = "You entered: " + inputValue;
-
-    // Clear the input field after displaying the value
-    document.getElementById("usernameInput").value = "";
-});
-
-// Part 3: Handling Attributes
-
-// Get the href value from the link and display it in the outputArea
-let link = document.getElementById("myLink");
-document.getElementById("outputArea").textContent = "Link URL: " + link.getAttribute("href");
-
-// Change the href of the link to https://www.example.com and update its text
-link.setAttribute("href", "https://www.example.com");
-link.textContent = "Go to Example";
-
-// Remove the href attribute from the link and update the outputArea
-link.removeAttribute("href");
-document.getElementById("outputArea").textContent = "Link is now disabled";
-
-// Check if the link still has an href attribute and display a message in the outputArea
-if (!link.hasAttribute("href")) {
-    document.getElementById("outputArea").textContent = "The link is no longer active.";
-}
-
-// Bonus: Toggle the visibility of the contentArea when the toggle button is clicked
-document.getElementById("toggleButton").addEventListener("click", function() {
-    let contentArea = document.getElementById("contentArea");
-    if (contentArea.style.display === "none") {
-        contentArea.style.display = "block";
-    } else {
-        contentArea.style.display = "none";
-    }
-});
+        function sel(selector) {return document.querySelector(selector);}
+        document.getElementById("headerTitle").textContent = "JavaScript DOM Manipulation";
+        let desc = document.getElementsByClassName("description");
+        for (let i = 0; i < desc.length; i++) {desc[i].style.color = "blue";}
+        let divs = document.getElementsByTagName("div");
+        for (let i = 0; i < divs.length; i++) {divs[i].style.fontStyle = "italic";}
+        sel("p").classList.add("highlight");
+        let buttons = document.querySelectorAll("button");
+        buttons.forEach(button => {button.style.backgroundColor = "green";});
+        sel("#sub-btn").onclick =  function() {
+            let inputValue = sel("#username").value;
+            sel("#outputArea").textContent = "You entered: " + inputValue;
+            sel("#username").value = "";}
+        let link = sel("#myLink");
+        sel("#outputArea").textContent = "Link URL: " + link.getAttribute("href");
+        link.setAttribute("href", "https://www.example.com");
+        link.textContent = "Go to Example";
+        link.removeAttribute("href");
+        if (!link.hasAttribute("href")) {
+            sel("#outputArea").textContent = "Link is now disabled";
+            sel("#outputArea").textContent = "The link is no longer active.";}
+        sel("#toggleButton").onclick = function() {
+            sel("#contentArea").classList.toggle("hide");}
     </script>
 </body>
 </html>
