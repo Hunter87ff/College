@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Animations with JavaScript</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            text-align: center;
+            line-height: 200px;
+            background-color: lightcoral;
+            transition: all 0.5s ease;
+            cursor: pointer;
+            position: relative;
+        }
+        #formMessage{ transition: all ease 5s; opacity: 1;}
+        .hidden {opacity: 0!important;}
+        .hover {background-color: lightseagreen;}
+        .rotate {transform: rotate(360deg); transition: transform 0.5s;}
+    </style>
+</head>
+<body>
+    <h1>Interactive Page with Custom Animations</h1>
+    <div id="clickBox" class="box" onclick="this.classList.toggle('rotate')">Click Me</div>
+    <div id="hoverBox" class="box" onmouseover="Hover(this)">Hover Over Me</div>
+    <div id="moveBox" class="box">Press Arrow Key</div>
+    <form id="myForm">
+        <input type="text" placeholder="Type something" required>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="formMessage" class="box hidden">Form Submitted Successfully!</div>
+    <script>
+        function sel(selection){return document.querySelector(selection);}
+        const Hover = (e) => {e.classList.toggle('hover'); e.onmouseout=()=>e.classList.toggle('hover')};
+        const moveBox = document.getElementById('moveBox');
+        moveBox.style.left = '0px';
+        moveBox.style.top = '0px';
+        document.addEventListener('keydown', function(event) {
+            event.key=="ArrowRight"?moveBox.style.left = `${parseInt(moveBox.style.left) + 10}px`: null;
+        });
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            sel("#formMessage").classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>
