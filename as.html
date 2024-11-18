@@ -1,0 +1,9 @@
+<script>
+let webas = "https://hunter87ff.github.io/College/sem3/web/assignments/assignment"
+let params = new URLSearchParams(location.search)
+let as = params.get("web")
+if(as){
+  let url = webas+parseInt(as);
+  document.location.href=url;
+}
+</script>
