@@ -1,20 +1,19 @@
-import java.lang.Thread;
-
-class Threadd extends Thread{
-    public void run(){
-        System.out.println("Thread is running");
+class MyThread implements Runnable {
+    @Override
+    public void run() {
+        System.out.println("Running Thread...");
     }
 }
 
-public class Test{
-    public static void main(String[] args){
-        Threadd t1 = new Threadd();
-        try{
-            Thread.sleep(500);
-            t1.start();
-        }
-        catch(InterruptedException e){
-            System.out.println(e);
+public class Assignment9 {
+    public static void main(String[] x) {
+        MyThread obj = new MyThread();
+        Thread t = new Thread(obj);
+        try {
+            Thread.sleep(5000);
+            t.start();
+        } catch (InterruptedException e) {
+            System.out.println("Error : " + e.toString());
         }
     }
 }
