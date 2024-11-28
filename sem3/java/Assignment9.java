@@ -10,12 +10,11 @@ public class Test{
     public static void main(String[] args){
         Threadd t1 = new Threadd();
         try{
-            Thread.sleep(1000);
+            Thread.sleep(500);
             t1.start();
         }
         catch(InterruptedException e){
             System.out.println(e);
         }
-        
     }
 }
