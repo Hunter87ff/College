@@ -6,7 +6,6 @@ public class Assignment_11 {
         names.add("hunter87");
         names.add("Neha");
         names.add("sourav");
-        names.add("Akash");
         for (String i : names) {
             System.out.println(i);
         }
