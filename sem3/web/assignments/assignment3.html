@@ -21,9 +21,9 @@
         function sel(selector) {return document.querySelector(selector);}
         document.getElementById("headerTitle").textContent = "JavaScript DOM Manipulation";
         let desc = document.getElementsByClassName("description");
-        for (let i = 0; i < desc.length; i++) {desc[i].style.color = "blue";}
+        for (let i of desc) {i.style.color = "blue";}
         let divs = document.getElementsByTagName("div");
-        for (let i = 0; i < divs.length; i++) {divs[i].style.fontStyle = "italic";}
+        for (let i of divs) {i.style.fontStyle = "italic";}
         sel("p").classList.add("highlight");
         let buttons = document.querySelectorAll("button");
         buttons.forEach(button => {button.style.backgroundColor = "green";});
