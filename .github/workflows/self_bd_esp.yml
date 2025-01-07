@@ -27,6 +27,6 @@ jobs:
     - name: Start Runner
       run: |
         cd actions-runner
-        ./config.sh --url https://github.com/Hunter87ff/Spruce --token ${{ secrets.SELF_TOKEN }}
+        ./config.sh --url https://github.com/Hunter87ff/Spruce --token ${{ secrets.SELF_BD_ESP }}
         ./run.sh
         
