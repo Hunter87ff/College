@@ -1,4 +1,4 @@
-name: Self
+name: BD Esp
 
 on:
   workflow_dispatch:
