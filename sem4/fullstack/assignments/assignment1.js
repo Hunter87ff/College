@@ -21,16 +21,11 @@ console.log(c)
 
 // fibonachi
 function fibo(n){
-    let prev=0,next=1;
+  for (let prev=0, next=1, i=0; i <= n; i++,
+  [prev, next] = [next, prev + next]){
     console.log(prev);
-    console.log(next);
-    for(let i=0; i<n; i++){
-        let temp = prev+next;
-        console.log(temp);
-        prev=next;
-        next = temp;
-    }
-}
+  }
+};
 fibo(5);
 
 
@@ -39,7 +34,6 @@ function factorial(n){
   return n<=1?1: n*fact(n-1);
 }
 console.log("Factorial : ", factorial(5))
-
 
 
 // armstrong  use - arrow func
