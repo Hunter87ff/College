@@ -2,7 +2,7 @@
 
 int bSearch(int arr[], int l, int h, int target) {
     if (l > h) {return -1;}
-    int m = l + (h - l) / 2;
+    int m = (h + l) / 2;
     if (arr[m] == target){return m;}
     return arr[m] > target? bSearch(arr, l, m - 1, target):bSearch(arr, m + 1, h, target);
 }
