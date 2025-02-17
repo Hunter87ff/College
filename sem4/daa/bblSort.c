@@ -4,11 +4,10 @@
 
 int main(){
     int i, j,n=4;
-    float arr[20], temp;
-//  int arr[20] = {4,3,8,1, 9};
+    int arr[20], temp;
     for(i=0; i<n; i++){
         printf("Enter Element : ");
-        scanf("%f", &arr[i]);
+        scanf("%d", &arr[i]);
     }
     for(i=0; i<n; i++){
         for(j=0; j<n-i-1; j++){
@@ -20,7 +19,7 @@ int main(){
         }
     }
     for(i=0; i<n; i++){
-        printf("%f, ", arr[i]);
+        printf("%d, ", arr[i]);
     }
 }
 // 9 7 6 3 1
