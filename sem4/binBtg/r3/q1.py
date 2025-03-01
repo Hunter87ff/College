@@ -22,7 +22,11 @@ def nextMax(arr:list, i, j):
 def sumMax(arr, m, n):
     sum=0
     i,j=0,0
-    for _ in range(m+n):
+    for _ in range(m+1+n):
+        if i==0 and j==0 :
+            print(arr[i][j], end=" ")
+            sum+=arr[i][j]
+        
         nm = nextMax(arr, i,j)
         if nm:
             i,j = nm[1:3]
@@ -31,9 +35,8 @@ def sumMax(arr, m, n):
     print()
     print(sum)
 
-_arr = [
-    [4,3,1,8],
-    [1,5,2,9],
-    [6,2,4,6]
-]
-sumMax(_arr, 3,4)
+_arr =[[1, 3, 1],
+ [1, 1, 1],
+ [100, 1, 100]]
+ 
+sumMax(_arr, 3,3)
