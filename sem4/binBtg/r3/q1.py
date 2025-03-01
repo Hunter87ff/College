@@ -22,7 +22,7 @@ def nextMax(arr:list, i, j):
 def sumMax(arr, m, n):
     sum=0
     i,j=0,0
-    for _ in range(m+1+n):
+    for _ in range(m+n):
         if i==0 and j==0 :
             print(arr[i][j], end=" ")
             sum+=arr[i][j]
