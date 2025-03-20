@@ -148,3 +148,7 @@ console.log("Spliced:" , arr.splice(0,1))
 console.log("After Join:", arr.join('_'))
 console.log("All values are > 500: ", arr.every(e=>e>500))
 console.log("vals == 500:", arr.some(e=>e==500))
+
+
+// 6. Create a NodeJS script to create object using function and create an array and apply it's unbuilt methods.
+
