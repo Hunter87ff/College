@@ -17,16 +17,19 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.11.0
+
+    - name: Set up JDK 22
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'temurin'
+        java-version: '22'
+
+        
     - name: Setup Runner
       run: |
-        mkdir actions-runner && cd actions-runner
-        curl -o actions-runner-linux-x64-2.320.0.tar.gz -L https://github.com/actions/runner/releases/download/v2.320.0/actions-runner-linux-x64-2.320.0.tar.gz
-        echo "${{ secrets.HASH }}  actions-runner-linux-x64-2.320.0.tar.gz" | shasum -a 256 -c
-        tar xzf ./actions-runner-linux-x64-2.320.0.tar.gz
-        
-    - name: Start Runner
-      run: |
-        cd actions-runner
-        ./config.sh --url https://github.com/Hunter87ff/Spruce --token ${{ secrets.SELF_TOKEN }}
-        ./run.sh
-        
+        cd exp && python mc.py
+
