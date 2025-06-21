@@ -9,7 +9,7 @@
  -->
 
 <?php
-$arr = ["Bittu", "Annie", "Alice", "Bob", "Charlie", "Alice", "Ken"];
+$arr = ["Alex", "Lilly", "Ben", "Bittu", "Annie", "Alice", "Bob", "Charlie", "Alice", "Ken"];
 array_pop($arr); //pop
 array_splice($arr, 5, 0, "NewName"); //insert
 rsort($arr); //sort + reverse
@@ -21,3 +21,5 @@ foreach(array_unique($arr) as $n){
 echo "/nAnnie found at : ".  array_search("Annie", $arr); //search
 
 ?>
+
+<!--Lilly Ken Charlie Bob Bittu Ben Annie Alice Alex /nAnnie found at : 6->
