@@ -8,28 +8,16 @@
 ⮚	Search and find out position of an element from array  
  -->
 
- <?php
-    function show_array($title, $array) {
-        echo "<h3>$title :</h3>";
-        foreach ($array as $name) {echo $name . ", ";}
-    }
-    // Create an array and store 10 names
-    $names = ["Alice", "Bob", "Charlie", "David", "Eve", "Frank", "Grace", "Heidi", "Ivan", "Judy"];
+<?php
+$arr = ["Bittu", "Annie", "Alice", "Bob", "Charlie", "Alice", "Ken"];
+array_pop($arr); //pop
+array_splice($arr, 5, 0, "NewName"); //insert
+rsort($arr); //sort + reverse
 
-    show_array("Original Array", $names);
-    sort($names);
-    show_array("Sorted Array", $names);
-    $uniqueNames = array_unique($names);
-    show_array("Array without Duplicates", $uniqueNames);
-    array_pop($names);
-    show_array("Array after removing the last element", $names);
-    $reversedNames = array_reverse($names);
-    show_array("Reversed Array", $reversedNames);
-    array_splice($names, 5, 0, "NewName");
-    show_array("Array after Inserting 'NewName' at position 5", $names);
+foreach(array_unique($arr) as $n){
+  echo "$n ";
+}; //foreach + no duplicate
 
-    $searchName = "Charlie";
-    $position = array_search($searchName, $names);
-    echo "<h3>Position of '$searchName' in the array: " . ($position !== false ? $position : "Not found") . "</h3>"; 
+echo "/nAnnie found at : ".  array_search("Annie", $arr); //search
 
 ?>
