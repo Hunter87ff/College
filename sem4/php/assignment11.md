@@ -1,11 +1,17 @@
 31. Write a PHP program to retrieve given URL information.
 ```php
 <?php
-echo "Host: " . parse_url($_SERVER['REQUEST_URI'], PHP_URL_HOST);
+print_r(parse_url("http://localhost:80/test.php"));
 ?>
 ```
 ```
-Host: localhost
+Array
+(
+    [scheme] => http
+    [host] => localhost
+    [port] => 80
+    [path] => /test.php
+)
 ```
 
 32. Write a PHP program to upload a file and get information about the upload file.
