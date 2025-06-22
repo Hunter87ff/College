@@ -3,12 +3,18 @@
 ```php
 <!-- header.php -->
 <a href="home.php">Home</a> | <a href="about.php">About</a>
-
+```
+```php
 <!-- home.php -->
 <?php include 'header.php'; ?>
 <h1>Welcome Home</h1>
-
+```
+```php
 <!-- about.php -->
 <?php include 'header.php'; ?>
 <h1>About Us</h1>
 ```
+Output
+
+![image](https://github.com/user-attachments/assets/277f4cb1-2455-4b1f-bcbe-4ae2fd1bc32d)
+
