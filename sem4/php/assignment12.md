@@ -20,6 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </form>
 ```
 Output
+
 ![image](https://github.com/user-attachments/assets/5584bc30-5d46-441c-92a9-991800aa6ea5)
 
 
